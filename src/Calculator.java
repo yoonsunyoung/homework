@@ -19,20 +19,19 @@ public class Calculator {
 	}
 	
 	
-	public static void add(int addFirstNum, int addSecondNum){		
-		int result = addFirstNum + addSecondNum;		
-		System.out.println(result);
+	public static int add(int addFirstNum, int addSecondNum){		
+		return addFirstNum + addSecondNum;
 	}
 	
-	public static void subtract(int subtractionFirstNum, int subtractionSecondNum){		
-		int result = subtractionFirstNum - subtractionSecondNum;		
-		System.out.println(result);
+	public static int subtract(int subtractionFirstNum, int subtractionSecondNum){		
+		return subtractionFirstNum - subtractionSecondNum;
 	}
 
 	
 	public static void main(String[] args) {
 		
 		int menuNum, firstInput, lastInput;
+		int result = 0;
 		
 		do{
 			menuNum = menu();
@@ -51,12 +50,14 @@ public class Calculator {
 				
 				switch(menuNum){
 				case 1:
-					add(firstInput, lastInput);
+					result = add(firstInput, lastInput);
 					break;
 				case 2:
-					subtract(firstInput, lastInput);
+					result = subtract(firstInput, lastInput);
 					break;
 				}
+				
+				System.out.println("The result is "+ result);
 			}	
 		
 		}while(menuNum != 4);
