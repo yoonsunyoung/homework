@@ -23,6 +23,11 @@ public class Calculator {
 		int result = addFirstNum + addSecondNum;		
 		System.out.println(result);
 	}
+	
+	public static void subtract(int subtractionFirstNum, int subtractionSecondNum){		
+		int result = subtractionFirstNum - subtractionSecondNum;		
+		System.out.println(result);
+	}
 
 	
 	public static void main(String[] args) {
@@ -47,6 +52,9 @@ public class Calculator {
 				switch(menuNum){
 				case 1:
 					add(firstInput, lastInput);
+					break;
+				case 2:
+					subtract(firstInput, lastInput);
 					break;
 				}
 			}	
