@@ -18,11 +18,40 @@ public class Calculator {
 		return num;
 	}
 	
+	
+	public static void add(int addFirstNum, int addSecondNum){		
+		int result = addFirstNum + addSecondNum;		
+		System.out.println(result);
+	}
+
+	
 	public static void main(String[] args) {
 		
-		int menuNum;
+		int menuNum, firstInput, lastInput;
 		
-		menuNum = menu();
+		do{
+			menuNum = menu();
+			
+			if(menuNum == 4){
+				System.out.println("프로그램이 종료되었습니다.");
+			}
+			else{
+				Scanner scan = new Scanner(System.in);
+				
+				System.out.print("x: ");
+				firstInput = scan.nextInt();
+				
+				System.out.print("y: ");
+				lastInput = scan.nextInt();		
+				
+				switch(menuNum){
+				case 1:
+					add(firstInput, lastInput);
+					break;
+				}
+			}	
+		
+		}while(menuNum != 4);
 	}
 
 }
